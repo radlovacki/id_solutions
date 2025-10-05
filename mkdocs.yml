@@ -32,10 +32,13 @@ copyright: Copyright &copy; 2025 ID Solutions
 
 nav:
   - Почетна: index.md
+  - О нама:
+    - Компанија: about/index.md
+    - Програм: about/program.md
   - База знања:
     - RFID и NFC: knowledge/index.md
-    - LF Read-only RFID: knowledge/lf_ro_rfid.md
-    - LF Read/Write RFID: knowledge/lf_rw_rfid.md
+    - Непрограмабилни нискофреквентни RFID чипови: knowledge/lf_ro_rfid.md
+    - Програмабилни нискофреквентни RFID чипови: knowledge/lf_rw_rfid.md
 
 markdown_extensions:
   - attr_list
