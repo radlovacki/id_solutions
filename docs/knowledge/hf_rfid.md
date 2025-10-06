@@ -1,4 +1,4 @@
-# HF RFID
+# NFC - високофреквентни RFID чипови
 
 [FlexSmart DESFire Indala Prox Combo Card Datasheet](./pdfs/indala/flexsmart_desfire_indala_prox_card_ds_en.pdf),
 [FlexSmart DESFire Keyfob Datasheet](./pdfs/indala/flexsmart_desfire_keyfob_ds_en.pdf),

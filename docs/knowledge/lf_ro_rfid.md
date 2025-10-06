@@ -23,7 +23,7 @@ Chips*) раде на фреквенцији од 125 kHz. Имају уника
 * Произвођач: [EM Microelectronic](https://www.emmicroelectronic.com/)
 * Меморија: 64-bit, имплементирана у CMOS технологији
 * Претходно име: **H4100**
-* Нова верзија чипа **EM4102**
+* Нова верзија чипа: **EM4102**
 
 [EM4100 EM Microelectronic Datasheet](./pdfs/em4100_em_microelectronic_datasheet.pdf)
 
@@ -33,7 +33,7 @@ Chips*) раде на фреквенцији од 125 kHz. Имају уника
 
 * Произвођач: [EM Microelectronic](https://www.emmicroelectronic.com/)
 * Меморија: 128-bit, имплементирана у CMOS технологији
-* Нова верзија чипа **EM4105**
+* Нова верзија чипа: **EM4105**
 
 [EM4005 / EM4105 EM Microelectronic Datasheet](./pdfs/em4005_em_4105_em_microelectronic_datasheet.pdf)
 
