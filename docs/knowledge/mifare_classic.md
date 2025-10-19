@@ -21,11 +21,11 @@ MIFARE Classic серија интегрисаних кола, развијен�
 ## MIFARE Classic 1K
 
 MIFARE Classic 1K је оригинална и најраспрострањенија бесконтактна паметна
-картица. Комуникација картице са читачем одвија се у складу са ISO/IEC 14443
-Type A стандардом, који дефинише физички и логички слој бесконтактне
-комуникације. У оквиру процеса идентификације, картица користи анти-колизиони
-механизам који омогућује да више картица буду у домету читача без међусобног
-ометања.
+картица произведена 1994. године. Комуникација картице са читачем одвија се у
+складу са ISO/IEC 14443 Type A стандардом, који дефинише физички и логички слој
+бесконтактне комуникације. У оквиру процеса идентификације, картица користи
+антиколизиони механизам који омогућује да више картица буду у домету читача без
+међусобног ометања.
 
 Као идентификатор користи се 4-бајтни NUID (Non-Unique Identifier), који није
 јединствен и може се поновити код других картица. Картица поседује EEPROM
@@ -37,6 +37,16 @@ Type A стандардом, који дефинише физички и лог�
 треба користити у критичним апликацијама.
 
 ![MIFARE Classic 1K Datasheet](./pdfs/MF1S503x.pdf)
+
+## MIFARE Classic 4K
+
+MIFARE Classic 4K, произведена 1995. године, има идентичне карактеристике као
+MIFARE Classic 1K, осим што располаже са 4 kB EEPROM меморије, што омогућује
+складиштење више података по картици. EEPROM је организован у 32 сектора по 4
+блока од по 16 бајтова и додатних 8 сектора од 16 блокова од по 16 бајтова, што
+укупно износи 40 сектора и 256 блокова од по 16 бајтова.
+
+![MIFARE Classic 4K Datasheet](./pdfs/MF1ICS70.pdf)
 
 ## MIFARE Classic EV1 1K
 
@@ -69,18 +79,31 @@ MIFARE Classic EV1 4K је картица из исте фамилије, нам
 
 ![MIFARE Classic EV1 4K Datasheet](./pdfs/MF1S70YYX_V1.pdf)
 
-## Компатибилна интегрисана кола (клонови)
+## Компатибилна интегрисана кола и клонови
 
-|                IC               | EEPROM |           Произвођач          |      Стандард      | Карактеристике                                                        |                                   Datasheet                                   |
-| :-----------------------------: | :----: | :---------------------------: | :----------------: | :-------------------------------------------------------------------- | :---------------------------------------------------------------------------: |
-|           **FM11RF08**          |  1 kB  |     Fudan Microelectronics    |     ISO 14443 A    | Потпуна MIFARE 1K компатибилност                                      |                   [Datasheet](./pdfs/FM11RF08_datasheet.pdf)                  |
-|           **FM11RF32**          |  4 kB  |     Fudan Microelectronics    |     ISO 14443 A    | Потпуна MIFARE 4K компатибилност                                      |                   [Datasheet](./pdfs/FM11RF32_datasheet.pdf)                  |
-|          **SLE66R35x**          |  1 kB  |     Infineon Technologies     | ISO 14443-2 & -3 A | Потпуна Classic 1K компатибилност, боља RF стабилност                 |                [Datasheet](./pdfs/infineon-nrg-sle66r35e7x.pdf)               |
-|          **AT88RF020**          |  256 B |       Microchip (Atmel)       |     ISO 14443 A    | Рани „компатибилан“ модел, мањи EEPROM, ограничена примена            |                                       –                                       |
-|           **UCODE S**           |  1 kB  |      Shanghai Huahong IC      |     ISO 14443 A    | MIFARE S50 компатибилност, ограничена безбедност                      |                                       –                                       |
-|        **NTAG 213 Clone**       |  144 B | Shenzhen Xinyu / Jcop ко­пије  |     ISO 14443 A    | У пракси опонаша MIFARE Classic, UID могућ за промену                 |                                       –                                       |
-| **CUID (S50 Magic Card Gen 1)** |  1 kB  |   Разни кинески произвођачи   |     ISO 14443 A    | Омогућава писање UID-а, није званични чип                             |                                       –                                       |
-|     **UID-Changeable Gen 2**    |  1 kB  |  Разни произвођачи (клонови)  |     ISO 14443 A    | Подржава мењање UID-а више пута, користи модификован Crypto-1         |                                       –                                       |
-|          **FM11RF08S**          |  1 kB  |     Fudan Microelectronics    |     ISO 14443 A    | Верзија са побољшаним RF интерфејсом, 7B UID                          |                                       –                                       |
-|  **LEGIC Prime MF-Compatible**  |  1 kB  |       LEGIC Identsystems      |     ISO 14443 A    | Частична Classic 1K компатибилност, нека ограничења у аутентификацији |                                       –                                       |
-|      **ST25TA16K (емул.)**      |  2 kB  |       STMicroelectronics      |     ISO 14443 A    | Нема Crypto-1, али може емул. Classic структуру (NFC Type 4)          | [ST25TA16K Datasheet](https://www.st.com/resource/en/datasheet/st25ta16k.pdf) |
+Тржиште је препуно разних компатибилних или клонираних MIFARE Classic
+интегрисаних кола. За нека интегрисана кола подаци су доступни...
+
+| Интегрисано коло | EEPROM | Произвођач | Стандард | Карактеристике | Datasheet |
+| - | - | - | - | - | - |
+| FM11RF08 | 1 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 1K компатибилност | [Datasheet](./pdfs/FM11RF08_datasheet.pdf) |
+| FM11RF08S |1 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 1K компатибилност, побољшан RF, 7B UID | [Datasheet](./pdfs/FM11RF08S_datasheet.pdf) |
+| FM11RF32 | 4 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 4K компатибилност  | [Datasheet](./pdfs/FM11RF32_datasheet.pdf) |
+| SLE66R35x | 1 kB | Infineon Technologies | ISO 14443-2 & -3 A | MIFARE Classic 1K компатибилност, побољшан RF | [Datasheet](./pdfs/infineon-nrg-sle66r35e7x.pdf)               |
+
+...док су за нека штури или потпуно недоступни. Поред компанија NXP (Philips)
+Fudan Microelectronics и Infineon Technologies, интегрисана кола по ISO 14443
+стандардима производе (или су их производили) компаније:
+
+* Angstrom
+* EM Microelectronic
+* HID Global
+* Innovision (Broadcom)
+* Inside Secure
+* Kovio
+* LEGIC
+* Quanray
+* Shanghai Huahong Integrated Circuit
+* Sokymat (CYNTAG)
+* ST Microelectronics
+* Verayo
