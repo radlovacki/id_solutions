@@ -1,5 +1,5 @@
 site_name: ID Solutions
-site_url: https://radlovacki.github.io/id_solutions/
+site_url: https://www.idsolutions.in.rs
 site_author: ID Solutions Team
 theme:
   name: material
@@ -15,6 +15,8 @@ theme:
     - content.tabs.link
     - header.autohide
     - navigation.tabs
+    - navigation.expand
+    - navigation.instant
   font:
     text: Roboto
     code: Roboto Mono
