@@ -5,12 +5,17 @@ MIFARE Classic серија интегрисаних кола, развијен�
 започела је револуцију са бесконтактним паметним картицама давне 1994. године.
 Данас су из ове серије доступне следеће бесконтактне паметне картице:
 
-* MIFARE Classic 1K са MF1S503x интегрисаним колом,
-* MIFARE Classic EV1 1K са MF1S50YYX_V1 интегрисаним колом и
-* MIFARE Classic EV1 4K са MF1S70YYX_V1 интегрисаним колом и
+* MIFARE Classic 1K са MF1S503x интегрисаним колима,
+* MIFARE Classic 4K са MF1S703x интегрисаним колима,
+* MIFARE Classic EV1 1K са MF1S50YYX_V1 интегрисаним колима и
+* MIFARE Classic EV1 4K са MF1S70YYX_V1 интегрисаним колима.
 
-Ове бесконтактне паметне картице могу да буду имплементиране и у виду
-привезака, наруквица, постера, налепница и др.
+Оригинални модели (Classic 1K и 4K) представљају прву генерацију MIFARE
+технологије, док серија EV1 доноси побољшања у издржљивости, NFC
+компатибилности и производном квалитету.
+
+MIFARE Classic бесконтактне паметне картице могу да буду имплементиране и у
+виду привезака, наруквица, постера, налепница и др.
 
 И поред многих мана, захваљујући својој једноставности, ниској цени и великој
 распрострањености, ове картице се и даље користе у системима јавног превоза, за
@@ -46,7 +51,7 @@ MIFARE Classic 1K, осим што располаже са 4 kB EEPROM мемо�
 блока од по 16 бајтова и додатних 8 сектора од 16 блокова од по 16 бајтова, што
 укупно износи 40 сектора и 256 блокова од по 16 бајтова.
 
-![MIFARE Classic 4K Datasheet](./pdfs/MF1ICS70.pdf)
+![MIFARE Classic 4K Datasheet](./pdfs/MF1S703x.pdf)
 
 ## MIFARE Classic EV1 1K
 
@@ -82,18 +87,19 @@ MIFARE Classic EV1 4K је картица из исте фамилије, нам
 ## Компатибилна интегрисана кола и клонови
 
 Тржиште је препуно разних компатибилних или клонираних MIFARE Classic
-интегрисаних кола. За нека интегрисана кола подаци су доступни...
+интегрисаних кола, нарочито од мање познатих или непознатих компанија из Кине.
+За нека интегрисана кола подаци су доступни...
 
 | Интегрисано коло | EEPROM | Произвођач | Стандард | Карактеристике | Datasheet |
 | - | - | - | - | - | - |
 | FM11RF08 | 1 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 1K компатибилност | [Datasheet](./pdfs/FM11RF08_datasheet.pdf) |
-| FM11RF08S |1 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 1K компатибилност, побољшан RF, 7B UID | [Datasheet](./pdfs/FM11RF08S_datasheet.pdf) |
+| FM11RF08S |1 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 1K EV1 компатибилност, побољшан RF, 7B UID | [Datasheet](./pdfs/FM11RF08S_datasheet.pdf) |
 | FM11RF32 | 4 kB | Fudan Microelectronics | ISO 14443 A | MIFARE Classic 4K компатибилност  | [Datasheet](./pdfs/FM11RF32_datasheet.pdf) |
-| SLE66R35x | 1 kB | Infineon Technologies | ISO 14443-2 & -3 A | MIFARE Classic 1K компатибилност, побољшан RF | [Datasheet](./pdfs/infineon-nrg-sle66r35e7x.pdf)               |
+| SLE66R35x | 1 kB | Infineon Technologies | ISO 14443-2 & -3 A | MIFARE Classic 1K компатибилност, побољшан RF | [Datasheet](./pdfs/infineon-nrg-sle66r35e7x.pdf) |
 
 ...док су за нека штури или потпуно недоступни. Поред компанија NXP (Philips)
 Fudan Microelectronics и Infineon Technologies, интегрисана кола по ISO 14443
-стандардима производе (или су их производили) компаније:
+стандардима производе (или су их производиле) компаније:
 
 * Angstrom
 * EM Microelectronic
@@ -107,3 +113,8 @@ Fudan Microelectronics и Infineon Technologies, интегрисана кола
 * Sokymat (CYNTAG)
 * ST Microelectronics
 * Verayo
+
+MIFARE Classic технологија се и данас користи у многим системима због ниске
+цене и широке подршке, али се за нове пројекте препоручују новије технологије
+као што су MIFARE DESFire или NTAG серије, које користе напредније
+криптографске алгоритме.
