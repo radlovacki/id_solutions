@@ -29,6 +29,7 @@ nav:
     - RFID и NFC: knowledge/index.md
     - Непрограмабилни нискофреквентни RFID чипови: knowledge/lf_ro_rfid.md
     - Програмабилни нискофреквентни RFID чипови: knowledge/lf_rw_rfid.md
+    - Клонирање LF тагова: knowledge/proxmark3_lf.md
     - MIFARE: knowledge/mifare.md
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
