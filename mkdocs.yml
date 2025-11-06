@@ -1,12 +1,12 @@
 site_name: ID Solutions
-site_url: https://radlovacki.github.io/id_solutions/
+site_url: https://www.idsolutions.in.rs
 site_author: ID Solutions Team
 theme:
   name: material
   logo: assets/logo.png
   favicon: assets/favicon.ico
   palette:
-    primary: white
+    primary: teal
     accent: indigo
   language: sr
   features:
@@ -15,6 +15,8 @@ theme:
     - content.tabs.link
     - header.autohide
     - navigation.tabs
+    - navigation.expand
+    - navigation.instant
   font:
     text: Roboto
     code: Roboto Mono
@@ -30,7 +32,7 @@ nav:
     - Непрограмабилни нискофреквентни RFID чипови: knowledge/lf_ro_rfid.md
     - Програмабилни нискофреквентни RFID чипови: knowledge/lf_rw_rfid.md
     - Клонирање LF тагова: knowledge/proxmark3_lf.md
-    - MIFARE: knowledge/mifare.md
+    - MIFARE Classic: knowledge/mifare_classic.md
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
 
