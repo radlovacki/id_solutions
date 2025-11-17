@@ -35,6 +35,7 @@ nav:
     - MIFARE Classic: knowledge/mifare_classic.md
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
+    - Акроними: knowledge/dictionary.md
 
 markdown_extensions:
   - attr_list
