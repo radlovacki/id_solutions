@@ -36,6 +36,9 @@ nav:
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
     - Акроними: knowledge/dictionary.md
+  - Proxmark3:
+    - T5577: proxmark/t5577.md
+    - t55xx: proxmark/t55xx.md
 
 markdown_extensions:
   - attr_list
