@@ -28,7 +28,7 @@ nav:
     - Компанија: about/index.md
     - Програм: about/program.md
   - База знања:
-    - RFID и NFC: knowledge/index.md
+    - Радио-фреквентна идентификација (RFID): knowledge/rfid.md
     - Непрограмабилни нискофреквентни RFID чипови: knowledge/lf_ro_rfid.md
     - Програмабилни нискофреквентни RFID чипови: knowledge/lf_rw_rfid.md
     - Клонирање LF тагова: knowledge/proxmark3_lf.md
