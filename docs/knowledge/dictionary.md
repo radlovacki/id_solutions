@@ -10,7 +10,9 @@ the AFI code for security purposes.
 * **Anti-Collision** - Technology that prevents multiple tags from interfering
 with each other when they are read simultaneously.
 * **ATA5577** (**ATA5577C**, **T5577**). R/W IC found in LF tags - can emulate
-other LF formats. 
+other LF formats.
+* **ATQA** - Answer To Request (acc. to ISO/IEC 14443-4)
+* **ATS** - Answer To Select (acc. to ISO/IEC 14443-4)
 * **AWID** - Applied Wireless Identification Group. Manufacturer of RFID
 products such as proximity cards, key fobs, vehicle tags and readers.
 
@@ -18,15 +20,20 @@ products such as proximity cards, key fobs, vehicle tags and readers.
 
 ## C
 
+* **CL** - Cascade Level (acc. to ISO/IEC 14443-3)
+* **COS** - Card Operating System
 * **Cotag**. Dual-technology LF tags, that combine active (battery-powered) and
 passive technology.
 * **CRC** - Cyclic Redundancy Check. Error-detection method that generates a
 short, fixed-length value called a checksum to verify the integrity of digital
-data. 
+data.
+* **CT** - Cascade Tag, Type A
 * **CUID** - Changeable Unique Identifier. Special type of identifier used on
 certain tags, where the normally fixed UID can be modified.
 
 ## D
+
+* **DIF** - Dual Interface (cards)
 
 ## E
 
@@ -68,6 +75,9 @@ be globally unique.
 
 ## P
 
+* **PCD** - Proximity Coupling Device (“Contactless Reader”)
+* **PICC** - Proximity Integrated Circuit (“Contactless Card”)
+* **PKE** - Public Key Encryption (like RSA or ECC)
 * **Proximity tag** (**proximity card**, **prox card**, **key card**,
 **keycard**). Original 125 kHz tag without a smart chip, that doesn't hold more
 data than a magnetic stripe card.
@@ -76,9 +86,16 @@ data than a magnetic stripe card.
 
 ## R
 
+* **REQA** - Request Command, Type A
 * **RFID** - Radio Frequency Identification
+* **RFU** - Reserved for future use
+* **RID** - Random ID, typically dynamically generated at Power-on Reset (UID0
+= “0x08”, Random number in UID1… UID3)
 
 ## S
+
+* **SAK** - Select Acknowledge, Type A
+* **Select** - Select Command, Type A
 
 ## T
 
@@ -87,8 +104,8 @@ data than a magnetic stripe card.
 ## U
 
 * **UHF** - Ultra High Frequency
-* **UID** - Unique Identifier. A unique number assigned to each RFID tag by the
-manufacturer.
+* **UID** - Unique Identifier, Type A. A unique number assigned to each RFID
+tag by the manufacturer.
 
 ## V
 
