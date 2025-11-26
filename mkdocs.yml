@@ -31,9 +31,11 @@ nav:
     - Радио-фреквентна идентификација (RFID): knowledge/rfid.md
     - Непрограмабилни нискофреквентни RFID чипови: knowledge/lf_ro_rfid.md
     - Програмабилни нискофреквентни RFID чипови: knowledge/lf_rw_rfid.md
+    - Клонирање LF тагова: knowledge/proxmark3_lf.md
     - MIFARE Classic: knowledge/mifare_classic.md
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
+    - Акроними: knowledge/dictionary.md
 
 markdown_extensions:
   - attr_list
