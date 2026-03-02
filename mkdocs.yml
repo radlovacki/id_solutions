@@ -36,7 +36,8 @@ nav:
     - NFC: knowledge/nfc.md
     - NTAG: knowledge/ntag.md
     - Акроними: knowledge/dictionary.md
-  - Proxmark3:
+  - T55xx:
+    - Речник: knowledge/dict_t55xx.md
     - T5577: proxmark/t5577.md
     - t55xx: proxmark/t55xx.md
 
