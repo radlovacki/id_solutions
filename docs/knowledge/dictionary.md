@@ -4,6 +4,12 @@
 
 * **ACL** - Access Control List. A set of permissions stored in the tag’s
 memory sectors (trailer block with keys and access bits).
+* **ACL** - Allocation Class. Fixed 8-bit value in MSB of block 1 page 1 that
+helps categorize the organization responsible for allocating UIDs to the tags.
+`E0h` is the value for ATA5577.
+[ISO/IEC 15963-1](https://www.iso.org/standard/73195.html).
+* **AFE** - Analog Front End. All circuits that are directly connected to the
+coil terminals in the transponder.
 * **AFI** - Application Family Indicator. Memory block in the upper part of the
 tag's memory that identifies the tag's application area. Some manufacturers use
 the AFI code for security purposes.
@@ -18,8 +24,15 @@ products such as proximity cards, key fobs, vehicle tags and readers.
 
 ## B
 
+* **Bi-phase** - modulation. A method used by the transponder (tag) to send
+data back to the reader.
+
 ## C
 
+* **CID** - Chip ID. 5-bit field, specifically bits 17 to 21 in block 1 page 1,
+used to distinguish between different variations or specific models within the
+broader ATA5577 family of integrated circuits (`00001b` for ATA5577M1, `00010b`
+for ATA5577M2).
 * **CL** - Cascade Level (acc. to ISO/IEC 14443-3)
 * **COS** - Card Operating System
 * **Cotag**. Dual-technology LF tags, that combine active (battery-powered) and
@@ -40,11 +53,15 @@ certain tags, where the normally fixed UID can be modified.
 * **EM4100**
 * **EM410x**
 * **EM4x05**
+* **EEPROM** - Electrically Erasable Programmable Read-Only Memory. Type of
+non-volatile memory that retains data even when power is turned off
 
 ## F
 
 * **FDX-B**
 * **FlexPass**
+* **FSK** - Frequency Shift Keying - modulation. A method used by the
+transponder (tag) to send data back to the reader.
 
 ## G
 
@@ -53,6 +70,12 @@ certain tags, where the normally fixed UID can be modified.
 * **HF** - High Frequency
 
 ## I
+
+* **ICR** - IC Revision. 3-bit field, specifically bits 22 to 24 in block 1
+page 1, used for the IC and/or foundry version of the ATA5577.
+* **IDIC** - Identification Integrated Chip (Identification Integrated
+Circuit). Specific types of integrated circuits used in RFID applications,
+primarily operating in the LF range.
 
 ## J
 
@@ -64,10 +87,19 @@ certain tags, where the normally fixed UID can be modified.
 
 ## M
 
+* **Manchester** - modulation. A method used by the transponder (tag) to send
+data back to the reader.
+* **MFC** - Manufacturer Code. Second byte of block 1 page 1. Value `15h` is
+for Atmel/Microchip. [ISO/IEC 7816-6](https://www.iso.org/standard/77181.html).
+* **MSB** - Most Significant Byte. The byte in a multi-byte number that has the
+greatest weighted value or influence on the total value of that number.
+
 ## N
 
 * **NDEF** - NFC Data Exchange Format
 * **NFC** - Near Field Communication
+* **NRZ** - Non-Return-to-Zero - modulation. A method used by the transponder
+(tag) to send data back to the reader.
 * **NUID** -  Non-Unique Identifier. Tag identifier that is not guaranteed to
 be globally unique.
 
@@ -81,6 +113,8 @@ be globally unique.
 * **Proximity tag** (**proximity card**, **prox card**, **key card**,
 **keycard**). Original 125 kHz tag without a smart chip, that doesn't hold more
 data than a magnetic stripe card.
+* **PSK** - Phase Shift Keying - modulation. A method used by the transponder
+(tag) to send data back to the reader.
 
 ## Q
 
