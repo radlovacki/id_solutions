@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meni - Restoran ID Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f6f0;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #8B4513, #D2691E);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #8B4513;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+        }
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #D2691E;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .price {
+            font-weight: bold;
+            color: #8B4513;
+            text-align: right;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            h1 { font-size: 2em; }
+            table { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍽️ Restoran ID Solutions</h1>
+        <p>Dobrodošli u Vršac! Tradicija, ukus i gostoprimstvo.</p>
+    </header>
+
+    <div class="section">
+        <h2>🧂 Predjela</h2>
+        <table>
+            <thead>
+                <tr><th>Jelo</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Urnebes salata</td><td class="price">450</td></tr>
+                <tr><td>Platesa sa sirutkom</td><td class="price">550</td></tr>
+                <tr><td>Ajvar domaći</td><td class="price">350</td></tr>
+                <tr><td>Čvarci</td><td class="price">600</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🍲 Supe i Čorbe</h2>
+        <table>
+            <thead>
+                <tr><th>Jelo</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Teleća čorba</td><td class="price">400</td></tr>
+                <tr><td>Riblja čorba</td><td class="price">450</td></tr>
+                <tr><td>Čorba od luka</td><td class="price">350</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🔥 Roštilj</h2>
+        <table>
+            <thead>
+                <tr><th>Jelo</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Ćevapi (10 kom)</td><td class="price">950</td></tr>
+                <tr><td>Plješakvica (300g)</td><td class="price">950</td></tr>
+                <tr><td>Vešalica bela (300g)</td><td class="price">1100</td></tr>
+                <tr><td>Pileći batak</td><td class="price">700</td></tr>
+                <tr><td>Mješovito roštilj</td><td class="price">1200</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🍲 Glavna jela</h2>
+        <table>
+            <thead>
+                <tr><th>Jelo</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Karađorđeva šnicla</td><td class="price">1400</td></tr>
+                <tr><td>Musaka</td><td class="price">1100</td></tr>
+                <tr><td>Sarma (porcija)</td><td class="price">900</td></tr>
+                <tr><td>Ćuretina pečena</td><td class="price">1300</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🍹 Piće</h2>
+        <table>
+            <thead>
+                <tr><th>Piće</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Čaša piva (0.5l)</td><td class="price">350</td></tr>
+                <tr><td>Čaša vina (0.2l)</td><td class="price">400</td></tr>
+                <tr><td>Ćevapi sok</td><td class="price">300</td></tr>
+                <tr><td>Kafa domaća</td><td class="price">250</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🍰 Deserti</h2>
+        <table>
+            <thead>
+                <tr><th>Jelo</th><th>Cena (RSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Ćokoladna torta</td><td class="price">450</td></tr>
+                <tr><td>Palačinke sa šunkom</td><td class="price">400</td></tr>
+                <tr><td>Sladoled domaći</td><td class="price">350</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Sterijina 40, Vršac, Vojvodina | +381 61 234 5678 | www.idsolutions.in.rs</p>
+        <p>PDV je uračunat u cenu! © 2026 Restoran ID Solutions.</p>
+    </footer>
+</body>
+</html>
