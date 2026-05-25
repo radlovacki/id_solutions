@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Solution - Jelovnik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Zlatna */
+            --bg-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --section-bg: #252525;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--section-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .info {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #bbb;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid #444;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .item-details {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-name::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px dotted #555;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .item-description {
+            font-size: 0.85rem;
+            color: #999;
+            font-style: italic;
+            display: block;
+            margin-top: 3px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2rem; }
+            .item-name { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>ID SOLUTION</h1>
+            <div class="info">
+                <p>📍 Sterijina 40-44, 26300 Vršac</p>
+                <p>📞 +381 61 234 5678</p>
+                <p>🕒 Radno vreme: 08:00 - 23:00</p>
+            </div>
+        </header>
+
+        <!-- DORUČAK -->
+        <div class="menu-category">
+            <h2 class="category-title">Doručak</h2>
+            
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Omlet</span>
+                    <span class="item-description">3 jaja, pančeta, mocarela, šampinjoni, domaći hleb.</span>
+                </div>
+                <span class="item-price">420 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Benedikt Jaja</span>
+                    <span class="item-description">Poširana jaja na briošu sa holandez sosom i pršutom.</span>
+                </div>
+                <span class="item-price">560 RSD</span>
+            </div>
+        </div>
+
+        <!-- GLAVNA JELA -->
+        <div class="menu-category">
+            <h2 class="category-title">Glavna Jela</h2>
+            
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Burger "Solution"</span>
+                    <span class="item-description">100% junetina, čedar sir, karamelizovani luk, BBQ sos, pomfrit.</span>
+                </div>
+                <span class="item-price">890 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Piletina u sosu od tartufa</span>
+                    <span class="item-description">Pileći file, kremi sos od crnih tartufa, rižoto.</span>
+                </div>
+                <span class="item-price">1,150 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Biftek Tagliata</span>
+                    <span class="item-description">Listići bifteka na rukoli sa listićima parmezana i čerijem.</span>
+                </div>
+                <span class="item-price">1,850 RSD</span>
+            </div>
+        </div>
+
+        <!-- SALATE -->
+        <div class="menu-category">
+            <h2 class="category-title">Salate</h2>
+            
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Cezar Salata</span>
+                    <span class="item-description">Iceberg, piletina, krutoni, pančeta, dresing.</span>
+                </div>
+                <span class="item-price">720 RSD</span>
+            </div>
+        </div>
+
+        <!-- DESERTI -->
+        <div class="menu-category">
+            <h2 class="category-title">Deserti</h2>
+            
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Čokoladni Soufflé</span>
+                    <span class="item-description">Topla čokolada sa sladoledom od vanile.</span>
+                </div>
+                <span class="item-price">450 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Pistaći Cheesecake</span>
+                    <span class="item-description">Krem sir sa pastom od sicilijanskih pistaća.</span>
+                </div>
+                <span class="item-price">480 RSD</span>
+            </div>
+        </div>
+
+        <!-- PIĆE -->
+        <div class="menu-category">
+            <h2 class="category-title">Napici</h2>
+            
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Espresso</span>
+                </div>
+                <span class="item-price">170 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Domaća limunada 0.3l</span>
+                </div>
+                <span class="item-price">240 RSD</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-details">
+                    <span class="item-name">Craft Pivo (Kabinet) 0.33l</span>
+                </div>
+                <span class="item-price">390 RSD</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 ID Solution Gastro Bar. Sve cene su sa uračunatim PDV-om.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

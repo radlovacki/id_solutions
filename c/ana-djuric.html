@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana Đurić — CEO, ID Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: rgba(255,255,255,0.05);
+      --border: rgba(160,210,200,0.18);
+      --teal: #7ecdc4;
+      --teal-light: #b8e8e3;
+      --teal-dim: #4a9e96;
+      --text: #eef2f1;
+      --muted: #8fa5a2;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% -5%, rgba(126,205,196,0.13) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 90% 90%, rgba(126,205,196,0.07) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237ecdc4' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 60px 20px 80px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 118px;
+      height: 118px;
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: conic-gradient(var(--teal), var(--teal-light), var(--teal-dim), var(--teal-light), var(--teal));
+      animation: spin 8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .avatar-inner {
+      position: relative;
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--bg);
+      z-index: 1;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .title-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    .title-line::before,
+    .title-line::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--teal);
+      opacity: 0.5;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 300px;
+      line-height: 1.5;
+    }
+
+    /* ── Links ── */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(126,205,196,0.08), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 8px 32px rgba(126,205,196,0.12);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .link-btn:hover::before { opacity: 1; }
+
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .link-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .link-text { flex: 1; }
+
+    .link-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1px;
+    }
+
+    .link-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .link-arrow {
+      color: var(--teal);
+      opacity: 0.7;
+      font-size: 1rem;
+      transition: transform 0.18s;
+    }
+
+    .link-btn:hover .link-arrow {
+      transform: translateX(3px);
+      opacity: 1;
+    }
+
+    /* icon colors */
+    .ico-web    { background: linear-gradient(135deg, #1a2e2d, #2a4e4c); }
+    .ico-insta  { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+    .ico-email  { background: linear-gradient(135deg, #7ecdc4, #4a9e96); }
+    .ico-maps   { background: linear-gradient(135deg, #4285F4, #34A853); }
+    .ico-tiktok { background: linear-gradient(135deg, #010101, #ff0050); }
+    .ico-li     { background: #0077b5; }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 6px 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    /* stagger animations */
+    .links .link-btn:nth-child(1)  { animation: fadeUp 0.6s 0.15s ease both; }
+    .links .link-btn:nth-child(2)  { animation: fadeUp 0.6s 0.22s ease both; }
+    .links .link-btn:nth-child(3)  { animation: fadeUp 0.6s 0.29s ease both; }
+    .links .link-btn:nth-child(4)  { animation: fadeUp 0.6s 0.36s ease both; }
+    .links .link-btn:nth-child(5)  { animation: fadeUp 0.6s 0.43s ease both; }
+    .links .link-btn:nth-child(n+6){ animation: fadeUp 0.6s 0.50s ease both; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar-inner">
+        <img src="ana-djuric.jpg" alt="Ana Đurić"/>
+      </div>
+    </div>
+    <div>
+      <div class="name">Ana Đurić</div>
+      <div class="tagline">Driving innovation in digital identity,<br>with vision and purpose.</div>
+      <div class="title-line">Chief Executive Officer</div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="links">
+
+    <!-- Website -->
+    <a class="link-btn" href="https://www.idsolutions.in.rs/" target="_blank" rel="noopener">
+      <div class="link-icon ico-web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#7ecdc4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Company</div>
+        <div class="link-title">ID Solutions</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Instagram -->
+    <a class="link-btn" href="https://www.instagram.com/djuriicc_anaa" target="_blank" rel="noopener">
+      <div class="link-icon ico-insta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Instagram</div>
+        <div class="link-title">@djuriicc_anaa</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- TikTok -->
+    <a class="link-btn" href="https://www.tiktok.com/@djuriicc_anaa" target="_blank" rel="noopener">
+      <div class="link-icon ico-tiktok">
+        <svg viewBox="0 0 24 24" fill="#fff">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">TikTok</div>
+        <div class="link-title">@djuriicc_anaa</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Email -->
+    <a class="link-btn" href="mailto:ana.djuric@teslavs.edu.rs">
+      <div class="link-icon ico-email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Business Email</div>
+        <div class="link-title">ana.djuric@teslavs.edu.rs</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <div class="divider"></div>
+
+    <!-- Address / Maps -->
+    <a class="link-btn" href="https://maps.google.com/?q=Sterijina+40-44+Vrsac+26300+Serbia" target="_blank" rel="noopener">
+      <div class="link-icon ico-maps">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div class="link-text">
+        <div class="link-label">Visit Us</div>
+        <div class="link-title">Sterijina 40–44, Vršac, Serbia</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Ana Đurić &nbsp;·&nbsp; <a href="https://www.idsolutions.in.rs/">ID Solutions</a>
+  </div>
+
+</div>
+</body>
+</html>
